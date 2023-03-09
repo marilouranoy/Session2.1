@@ -1,12 +1,23 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+ * API Test Automation Training - Batch 4
+ * Marilou A. Ranoy
+ * 
+ * Homework 2.1
+ * RESTful API Test using HTTP Client and MSTest
+ * Base URL: https://petstore.swagger.io/#/
+ * Endpoint: /pet
+ * Create a test using PUT request to update an existing pet
+ * Add an Assertion for HTTP Status Code
+ * Add an Assertion if data is correctly updated
+ * Create a cleanup method using DELETE request 
+ * 
+*/
+
+using Newtonsoft.Json;
 
 namespace HWSession2_1
 {
+    //Class that defines our Pet model
     public partial class PetModel
     {
         [JsonProperty("id")]
@@ -28,6 +39,7 @@ namespace HWSession2_1
         public string Status { get; set; }
     }
 
+    //Class that defines our Category model
     public partial class Category
     {
         [JsonProperty("id")]
